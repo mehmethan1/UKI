@@ -1,0 +1,48 @@
+#include <IRremote.h>
+#include <Servo.h>
+
+Servo Servo1;
+
+IRrecv irrecv(2);
+decode_results results;
+
+#define BUTON1 0xFFA25D
+#define BUTON2 0xFF629D
+
+int servoPin = 9;
+
+void setup(){
+  Servo1.attach(servoPin);
+  Serial.println("IR alıcı etkinleştiriliyor ...");
+  Serial.begin(9600);
+  Serial.println("IR alıcı etkinleştirildi.");
+  irrecv.enableIRIn();
+}
+
+void loop(){
+  if (irrecv.decode(&results))
+  {
+      Serial.println(results.value, HEX);
+       if (results.value == BUTON2)
+    {
+        Servo1.write(90);
+        delay(500);
+        Servo1.write(35);
+        delay(500);
+        Servo1.write(90);
+
+    }
+
+    if (results.value == BUTON1)
+    {
+        Servo1.write(90);
+        delay(500);
+        Servo1.write(132);
+        delay(500);
+        Servo1.write(90);
+
+    }
+
+     irrecv.resume();
+  }
+}

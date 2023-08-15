@@ -25,4 +25,7 @@ https://github.com/mehmethan1/UKI/assets/71599621/792ef6d0-616d-4b6b-9fd9-9dc9f2
 https://github.com/mehmethan1/UKI/assets/71599621/5ad5ad25-9062-4296-ac7d-1b276e3a71b9
 
 --------------SONUÇ----------------
+
+
+
 https://github.com/mehmethan1/UKI/assets/71599621/3b927e3d-608d-4460-b433-85c41dd39794
